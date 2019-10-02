@@ -1,5 +1,6 @@
 import json
 import logging
+from behave.model_core import Status
 from uitestcore.utilities import logger_handler
 from uitestcore.utilities.browser_handler import BrowserHandler
 
@@ -28,6 +29,9 @@ def after_scenario(context, scenario):
     context.logger.log(20, "* * *")
     context.logger.log(20, f"* Scenario '{scenario.name}' ended with status: '{scenario.status.name}'")
     context.logger.log(20, "* * *")
+
+    if scenario.status == Status.failed:
+        BrowserHandler.take_screenshot(context.browser, scenario.name)
 
 
 def after_all(context):
