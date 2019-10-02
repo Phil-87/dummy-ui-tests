@@ -1,0 +1,11 @@
+.idea
+__pycache__/
+target
+logs
+debug.log
+local.log
+BrowserStackLocal.exe
+venv
+report
+screenshots
+browser_executables

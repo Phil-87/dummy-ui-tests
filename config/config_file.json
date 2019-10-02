@@ -1,0 +1,6 @@
+{
+  "maximize_browser": true,
+  "browser": "chrome",
+  "implicit_wait": 10,
+  "base_url": "https://www.nhs.uk"
+}
